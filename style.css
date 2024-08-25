@@ -1,0 +1,72 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    color: rgba(9,9,121,1); /* Un color azul fuerte para el título */
+}
+
+#registroForm{
+    background-color: #FFFFFF; /* Fondo blanco para un contraste limpio */
+    padding: 30px; /* Aumenta el padding para más espacio */
+    border-radius: 12px; /* Suaviza más los bordes */
+    margin: 20px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+label{
+    display: block;
+    margin-bottom: 6px;
+    color: #374151; /* Un gris oscuro para el texto */
+}
+
+label.inline{
+    display: inline-block;
+}
+
+input, select{
+    padding: 10px; /* Aumenta el padding para más comodidad */
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #D1D5DB; /* Bordes más suaves */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #F9FAFB; /* Fondo claro para los campos */
+}
+
+input[type="checkbox"]{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select{
+    width: 100%;
+}
+
+input[type="submit"]{
+    background-color: rgba(9,9,121,1); /* Botón principal en azul fuerte */
+    color: #FFFFFF;
+    padding: 16px;
+    border: none;
+    border-radius: 8px; /* Bordes ligeramente más redondeados */
+    cursor: pointer;
+    width: 100%;
+    transition: background-color .3s ease; /* Transición más rápida */
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(24, 24, 173); /* Un tono más claro al hacer hover */
+}
+
+.error{
+    color: #EF4444; /* Rojo brillante para los errores */
+    font-size: 12px; /* Tamaño un poco más grande para la legibilidad */
+}
