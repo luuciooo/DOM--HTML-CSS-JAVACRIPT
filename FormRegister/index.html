@@ -32,12 +32,12 @@
             <br>
 
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" >
+            <input type="password" id="password" name="password" required autocomplete="off">
             <div class="error" id="errorPassword"></div>
             <br>
 
             <label for="RePassword">Repetir contraseña:</label>
-            <input type="password" id="RePassword" name="RePassword" >
+            <input type="password" id="RePassword" name="RePassword" required autocomplete="off">
             <div class="error" id="errorRePassword"></div>
             <br>
 
@@ -70,7 +70,7 @@
             </select>
             <div class="error" id="errorNivelEstudio"></div>
 
-            <label class="inline">
+            <label >
                 <input type="checkbox" name="aceptoTerminos" id="aceptoTerminos" required>
                 Acepto términos y condiciones
             </label>
@@ -79,7 +79,7 @@
 
 
             <label>Publicidad</label>
-            <label for="ofertas"><input type="checkbox" name="publicidad" id="ofertas" value="ofertas"> Ofertas</label>
+            <label for="ofertas" ><input type="checkbox" name="publicidad" id="ofertas" value="ofertas"> Ofertas</label>
             <label for="novedades"><input type="checkbox" name="publicidad" id="novedades" value="novedades"> Novedades</label>
             <div class="error" id="errorPublicidad"></div>
             <br>
