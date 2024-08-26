@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(200, 48, 159);
+  background: linear-gradient(
+    90deg,
+    rgba(200, 48, 159, 1) 0%,
+    rgba(50, 12, 37, 1) 57%,
+    rgba(42, 13, 52, 1) 100%
+  );
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  margin: 15px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* Sombra más pronunciada */
+  width: 350px;
+}
+
+h2{
+    color: rgba(42, 13, 52, 1);
+    text-align: center;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(42, 13, 52, 1);
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-bottom: 15px;
+  background-color: rgba(50, 12, 37, 1) ;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: rgba(200, 48, 159, 1) ;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+#show-hide {
+  position: relative;
+  top: -10px;
+  float: right;
+  color: rgba(50, 12, 37, 1);
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+#show-hide:hover {
+  border-bottom: 1px solid rgb(221, 218, 218);
+  color: #beb4b4;
+}

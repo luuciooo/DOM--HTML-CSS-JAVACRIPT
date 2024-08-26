@@ -1,75 +1,85 @@
-body{
-    font-family: 'Poppins', sans-serif;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgba(0, 212, 255, 1);
+  background: linear-gradient(
+    248deg,
+    rgba(0, 212, 255, 1)0%,
+    rgba(9, 9, 121, 1) 43%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-h2{
-    color: rgba(9,9,121,1); /* Un color azul fuerte para el título */
+h2 {
+  color: rgba(9, 9, 121, 1);
+  text-align: center; /* Un color azul fuerte para el título */
 }
 
-#registroForm{
-    background-color: #FFFFFF; /* Fondo blanco para un contraste limpio */
-    padding: 30px; /* Aumenta el padding para más espacio */
-    border-radius: 12px; /* Suaviza más los bordes */
-    margin: 20px;
-    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-    width: 60%; /* 60/100 */
+#registroForm {
+  background-color: #ffffff; /* Fondo blanco para un contraste limpio */
+  padding: 30px; /* Aumenta el padding para más espacio */
+  border-radius: 12px; /* Suaviza más los bordes */
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* Sombra más pronunciada */
+  width: 60%; /* 60/100 */
 }
 
-label{
-    display: block;
-    margin-bottom: 6px;
-    color: #374151; /* Un gris oscuro para el texto */
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #374151; /* Un gris oscuro para el texto */
+  font-weight: bold;
 }
 
-label.inline{
-    display: inline-block;
+label.inline {
+  display: inline-block;
 }
 
-input, select{
-    padding: 10px; /* Aumenta el padding para más comodidad */
-    margin-bottom: 12px;
-    box-sizing: border-box;
-    border: 1px solid #D1D5DB; /* Bordes más suaves */
-    border-radius: 8px; /* Bordes redondeados */
-    background-color: #F9FAFB; /* Fondo claro para los campos */
+input,
+select {
+  padding: 10px; /* Aumenta el padding para más comodidad */
+  box-sizing: border-box;
+  border: 1px solid #d1d5db; /* Bordes más suaves */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #f9fafb;
+  padding-right: 10px; /* Fondo claro para los campos */
 }
 
-input[type="checkbox"]{
-    margin-top: 20px;
-    margin-bottom: 10px;
+input[type="checkbox"] {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"],
 input[type="password"],
-select{
-    width: 100%;
+select {
+  width: 100%;
 }
 
-input[type="submit"]{
-    background-color: rgba(9,9,121,1); /* Botón principal en azul fuerte */
-    color: #FFFFFF;
-    padding: 16px;
-    border: none;
-    border-radius: 8px; /* Bordes ligeramente más redondeados */
-    cursor: pointer;
-    width: 100%;
-    transition: background-color .3s ease; /* Transición más rápida */
+input[type="submit"] {
+  background-color: rgba(9, 9, 121, 1); /* Botón principal en azul fuerte */
+  color: #ffffff;
+  padding: 16px;
+  border: none;
+  border-radius: 10px; /* Bordes ligeramente más redondeados */
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease; /* Transición más rápida */
 }
 
-input[type="submit"]:hover{
-    background-color: rgb(24, 24, 173); /* Un tono más claro al hacer hover */
+input[type="submit"]:hover {
+  background-color: rgb(24, 24, 173); /* Un tono más claro al hacer hover */
 }
 
-.error{
-    color: #EF4444; /* Rojo brillante para los errores */
-    font-size: 12px; /* Tamaño un poco más grande para la legibilidad */
-    width: 100%;
+.error {
+  color: #ef4444; /* Rojo brillante para los errores */
+  font-size: 12px; /* Tamaño un poco más grande para la legibilidad */
+  width: 100%;
 }
