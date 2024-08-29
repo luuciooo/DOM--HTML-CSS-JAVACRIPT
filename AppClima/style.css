@@ -1,0 +1,119 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #a8ff78;
+  background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
+  background: linear-gradient(to right, #78ffd6, #a8ff78);
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  height: 100%; /* Altura del contenedor */
+  margin: auto; /* Centrar el contenedor */
+  padding: 20px; /* Padding dentro del contenedor */
+  border: 10px solid white;
+  border-radius: 25px; /* Borde más grueso y blanco */
+  background-color: rgba(255, 255, 255, 0.1); /* Transparente */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espacio entre los divs internos */
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  flex: 1;
+  width: 100%;
+  height: 50%;
+  margin: 0; /* Espacio entre los divs */
+  padding: 10px 0; /* Padding dentro de los divs */
+  background-color: rgba(255, 255, 255, 0.2); /* Transparente */
+  transition: background-color 0.3s ease; /* Suavizar el efecto de brillo */
+  box-sizing: border-box;
+  display: flex;
+}
+
+.carousel-track {
+  width: 90%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.carousel-item {
+  width: 20%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 5px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.carousel-item:hover {
+  transform: scale(1.3);
+}
+
+.carousel-button {
+  width: 5%;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 35px !important;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel-button.left {
+  left: 0;
+}
+
+.carousel-button.right {
+  right: 0;
+}
+
+.carousel-button:hover {
+  transform: scale(2.5);
+}
+
+/* .container {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(4, 74, 96);
+  box-shadow: 0 2px 4px rgb(44, 44, 44);
+}
+
+h1,
+h2,
+p {
+  color: white;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 70%;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(0, 166, 255);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#responseData {
+  margin-top: 20px;
+  font-size: 18px;
+} */
