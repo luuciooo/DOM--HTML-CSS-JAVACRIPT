@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- Google Fonts para las flechas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -21,39 +21,20 @@
 
 
     <div class="container">
-        <div class="carousel-container">
-            <button class="carousel-button left">
-                <span class="material-icons">chevron_left</span>
-            </button>
-            <div class="carousel-track">
-                <div class="carousel-item">1</div>
-                <div class="carousel-item">2</div>
-                <div class="carousel-item">3</div>
-                <div class="carousel-item">4</div>
-                <div class="carousel-item">5</div>
-            </div>
-            <button class="carousel-button right">
-                <span class="material-icons">chevron_right</span>
-            </button>
+        <div class="carousel-container" id="carousel-top">
         </div>
-        <div class="carousel-container">
-            <button class="carousel-button left">
-                <span class="material-icons">chevron_left</span>
-            </button>
-            <div class="carousel-track">
-                <div class="carousel-item">1</div>
-                <div class="carousel-item">2</div>
-                <div class="carousel-item">3</div>
-                <div class="carousel-item">4</div>
-                <div class="carousel-item">5</div>
+        <div class="carousel-container" id="carousel-buttom">
+            <div id="consulta-clima">
+                <p>Consultar Clima por Ciudad</p>
+                <input type="text" id="ciudad" placeholder="Ingresa el nombre de la ciudad">
+                <ul id="sugerencias"></ul>
+                <button id="buscar-clima">Buscar</button>
             </div>
-            <button class="carousel-button right">
-                <span class="material-icons">chevron_right</span>
-            </button>
         </div>
     </div>
 
 
+    <script src="script.js"></script>
 
 </body>
 
