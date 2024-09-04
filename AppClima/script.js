@@ -21,13 +21,12 @@ async function general() {
         mostrarMensajePermisos();
         return;
     }
-    configurarCarusel()
+    configurarCarusel('carousel-top')
     const data = await getWeatherData(ubicacion);
     console.log(data)
     const json = await limpiarJson(data);
     console.log(json)
     await renderWeatherCarousel(json,"carousel-top");
-    updateCarousel("carousel-top");
 }
 
 async function getCoords() {
@@ -47,7 +46,7 @@ async function getCoords() {
 function mostrarMensajePermisos() {
     const carouselTop = document.getElementById("carousel-top");
     carouselTop.innerHTML = `
-        <div id="location-error">
+        <div class="main-block" id="location-error">
             <p>No has permitido los permisos de ubicación.</p>
             <button id="retry-location">Volver a preguntar</button>
         </div>
@@ -57,30 +56,20 @@ function mostrarMensajePermisos() {
         general();
     });
 }
-
-function configurarCarusel() {
-    const carouselTop = document.getElementById("carousel-top");
-    const locationErrorDiv = document.getElementById("location-error");
-
-    if (locationErrorDiv) {
-        locationErrorDiv.style.display = 'none'; // Oculta el div
-    } // Verifica si el div "location-error" no está presente
-    carouselTop.innerHTML = `
-    <button class="carousel-button left" ">
+function configurarCarusel(carousel) {
+    const div = document.getElementById(carousel);
+    div.innerHTML = ''
+    div.innerHTML = `
+    <button class="carousel-button left" >
         <span class="material-icons">chevron_left</span>
     </button>
     <div class="carousel-track">
         <!-- Aquí irían los elementos del carrusel -->
     </div>
-    <button class="carousel-button right" ">
+    <button class="carousel-button right" >
         <span class="material-icons">chevron_right</span>
     </button>`;
-    document.querySelector('#carousel-top .carousel-button.left').addEventListener('click', () => {
-        prevSlide('carousel-top');
-    });
-    document.querySelector('#carousel-top .carousel-button.right').addEventListener('click', () => {
-        nextSlide('carousel-top');
-    });
+    carousel = 'carousel-top' ? addEventArrows('#carousel-top .carousel-button.left','#carousel-top .carousel-button.right','carousel-top') : addEventArrows('#carousel-buttom .carousel-button.left','#carousel-buttom .carousel-button.right','carousel-buttom');
 }
 
 async function getWeatherData(position) {
@@ -275,32 +264,22 @@ inputCiudad.addEventListener('input', () => {
 
 async function general2(hola) {
     console.log(hola)
-    if (hola) {
-        const div = document.getElementById('carousel-buttom');
-        div.innerHTML = ''
-        div.innerHTML = `
-    <button class="carousel-button left" ">
-        <span class="material-icons">chevron_left</span>
-    </button>
-    <div class="carousel-track">
-        <!-- Aquí irían los elementos del carrusel -->
-    </div>
-    <button class="carousel-button right" ">
-        <span class="material-icons">chevron_right</span>
-    </button>`;
-    }
-    document.querySelector('#carousel-buttom .carousel-button.left').addEventListener('click', () => {
-        prevSlide('carousel-buttom');
-    });
-    document.querySelector('#carousel-buttom .carousel-button.right').addEventListener('click', () => {
-        nextSlide('carousel-buttom');
-    });
+    configurarCarusel('carousel-buttom')
     const data = await getWeatherData(hola);
     console.log(data)
     const json = await limpiarJson(data);
     console.log(json)
     await renderWeatherCarousel(json,"carousel-buttom");
-    updateCarousel("carousel-buttom");
+}
+
+function addEventArrows(selectorLeft,selectorRight,selectorSlide){
+    document.querySelector(selectorLeft).addEventListener('click', () => {
+        prevSlide(selectorSlide);
+    });
+    document.querySelector(selectorRight).addEventListener('click', () => {
+        nextSlide(selectorSlide);
+    });
 
 }
+
 
