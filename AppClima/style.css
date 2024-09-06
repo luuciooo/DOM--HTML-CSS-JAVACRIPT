@@ -126,53 +126,48 @@ body {
   text-align: right;
 }
 
-.nombre-dia {
+.day-name {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.fecha {
+.date {
   font-size: 14px;
   margin: 0;
 }
 
-.temperaturas {
+.temperatures {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
 }
 
-.temperatura-min{
+.min-temp {
   font-size: 24px;
   font-weight: bold;
-}
-.temperatura-max {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.temperatura-min {
   color: #1e90ff;
 }
 
-.temperatura-max {
+.max-temp {
+  font-size: 36px;
+  font-weight: bold;
   color: #ff6347;
 }
 
-.barra {
+.divider {
   margin: 0 5px;
   font-size: 24px;
 }
 
-.condicion {
+.condition {
   font-weight: bold;
   font-size: 16px;
   margin: 5px 0;
 }
 
-.carousel-item-buttom {
+.carousel-item-bottom {
   font-size: 12px;
   text-align: left;
   display: flex;
@@ -215,6 +210,10 @@ body {
   right: 0;
 }
 
+.precipitation ,.humidity,.wind {
+  margin : 0;
+}
+
 
 
 
@@ -240,7 +239,7 @@ body {
   box-sizing: border-box;
 }
 
-#ciudad {
+#city {
   width: 60%;
   padding: 10px;
   border-radius: 25px;
@@ -251,7 +250,7 @@ body {
   position: relative; /* Necesario para que la lista se posicione correctamente en relación con el input */
 }
 
-#buscar-clima {
+#search-weather {
   width: 60%;
   max-width: 300px;
   height: 50px;
@@ -264,12 +263,12 @@ body {
   margin: 10px;
 }
 
-#buscar-clima:hover {
+#search-weather:hover {
   cursor: pointer;
   background-color: blue;
 }
 
-#sugerencias {
+#suggestions {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -287,12 +286,12 @@ body {
   display: none; /* Ocultar la lista por defecto */
 }
 
-#sugerencias li {
+#suggestions li {
   padding: 10px;
   cursor: pointer;
   color: #333;
 }
 
-#sugerencias li:hover {
+#suggestions li:hover {
   background-color: #eee;
 }
