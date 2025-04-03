@@ -2,40 +2,46 @@
 <html lang="en">
 
 <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicación de Clima</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"><!-- Enlace al archivo CSS externo -->
 
+    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    
+    <!-- Iconos de Material Icons y FontAwesome -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon personalizado como ícono de clima -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%230075ea' d='M256 112a144 144 0 1 1 0 288 144 144 0 1 1 0-288zm48 168h64a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8h-56.69a74.65 74.65 0 0 0-15.35-36.33 8 8 0 0 0-11.31-1.18l-15.53 12.42a8 8 0 0 0-1.22 11.25A42.3 42.3 0 0 1 304 256H184a16 16 0 0 1-16-16 16 16 0 0 1 16-16h8a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8h-8a48 48 0 0 0 0 96h160z'/></svg>" type="image/svg+xml">
 </head>
 
 <body>
-
-
-
-
+    <!-- Contenedor principal -->
     <div class="container">
+        <!-- Carrusel superior (puede ser usado para mostrar imágenes o datos adicionales) -->
         <div class="carousel-container" id="carousel-top">
         </div>
+        
+        <!-- Carrusel inferior que contiene el formulario de consulta del clima -->
         <div class="carousel-container" id="carousel-bottom">
             <div class="main-block" id="consulta-clima">
                 <p>Consultar Clima por Ciudad</p>
-                <input type="text" id="city" placeholder="Ingresa el nombre de la ciudad">
-                <ul id="suggestions"></ul>
-                <button class="submit" id="search-weather">Buscar</button>
+                <input type="text" id="city" placeholder="Ingresa el nombre de la ciudad"><!-- Campo de entrada de texto -->
+                <ul id="suggestions"></ul><!-- Lista para sugerencias de autocompletado -->
+                <button class="submit" id="search-weather">Buscar</button><!-- Botón para buscar el clima -->
             </div>
         </div>
     </div>
 
-
+    <!-- Script principal de la aplicación (JavaScript) -->
     <script type="module" src="js/main.js"></script>
-
 </body>
 
 </html>
